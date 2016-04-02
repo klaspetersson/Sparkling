@@ -3,7 +3,6 @@
  * @package sparkling
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="blog-item-wrap">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -34,14 +33,8 @@
 			<?php else : ?>
 			<div class="entry-content">
 
-				<?php
-				if ( get_theme_mod( 'sparkling_excerpts' ) == 1 ) :
-					the_excerpt();?>
+				<?php the_excerpt() ?>
 					<p><a class="btn btn-default read-more" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Read More', 'sparkling' ); ?></a></p>
-				<?php else :
-					the_content();
-				endif;
-				 ?>
 
 				<?php
 					wp_link_pages( array(
