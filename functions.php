@@ -113,6 +113,24 @@ function sparkling_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar Before Well', 'sparkling' ),
+    'id'            => 'sidebar-before-well',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar After Well', 'sparkling' ),
+    'id'            => 'sidebar-after-well',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+  ));
+
   register_sidebar(array(
     'id'            => 'home-widget-1',
     'name'          => esc_html__( 'Homepage Widget 1', 'sparkling' ),
